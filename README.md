@@ -59,6 +59,7 @@ Ejemplo de respuesta en formato JSON:
   "username": "usuarioejemplo",
   "email": "usuario@example.com"
 }
+```json
 
 
 ####  Contribuir 🤝
