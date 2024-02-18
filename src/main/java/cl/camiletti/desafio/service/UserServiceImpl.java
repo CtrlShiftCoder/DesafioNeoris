@@ -4,6 +4,7 @@ import cl.camiletti.desafio.model.PhoneModel;
 import cl.camiletti.desafio.model.UserModel;
 import cl.camiletti.desafio.repository.UserRepository;
 import cl.camiletti.desafio.util.JwtTokenUtil;
+import cl.camiletti.desafio.util.PasswordUtil;
 import cl.camiletti.desafio.util.ValidationException;
 import cl.camiletti.desafio.util.Validators;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,14 +22,14 @@ public class UserServiceImpl implements UserService {
 
     private final PhoneServiceImpl phoneServiceImpl;
 
-
+    private final PasswordUtil passwordUtil;
     @Autowired
-    public UserServiceImpl(UserRepository userRepository, Validators validators, JwtTokenUtil jwtTokenUtil,PhoneServiceImpl phoneServiceImpl) {
+    public UserServiceImpl(UserRepository userRepository, Validators validators, JwtTokenUtil jwtTokenUtil,PhoneServiceImpl phoneServiceImpl, PasswordUtil passwordUtil) {
         this.userRepository = userRepository;
         this.validators = validators;
         this.jwtTokenUtil = jwtTokenUtil;
         this.phoneServiceImpl = phoneServiceImpl;
-
+        this.passwordUtil = passwordUtil;
     }
 
     public UserModel registerUser(UserModel user) {
@@ -58,7 +59,10 @@ public class UserServiceImpl implements UserService {
                 phoneServiceImpl.savePhone(phone);
             }
 
+            String password = this.passwordUtil.encodePassword(user.getPassword());
+            user.setPassword(password);
             savedUser.setToken(token);
+
             return savedUser;
         } catch (ValidationException e) {
             throw new ValidationException("Error al registrar al usuario: " + e.getMessage());

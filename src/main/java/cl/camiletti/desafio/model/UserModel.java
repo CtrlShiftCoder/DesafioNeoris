@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -28,4 +29,8 @@ public class UserModel {
     private LocalDateTime lastLogin;
     private String token;
     private boolean isActive;
+
+    public UserModel() {
+        this.phones = new ArrayList<>();
+    }
 }
