@@ -45,7 +45,7 @@ Este endpoint permite registrar un nuevo usuario en el sistema.
   "password": "contrasena123"
 }
 
-## Respuestas 📋
+####  Respuestas 📋
 - **201 Created:** Se devuelve cuando el usuario se registra correctamente.
 - **400 Bad Request:** Se devuelve cuando hay un error de validación en los datos del usuario.
 - **500 Internal Server Error:** Se devuelve cuando ocurre un error interno en el servidor.
@@ -61,7 +61,7 @@ Ejemplo de respuesta en formato JSON:
 }
 
 
-## Contribuir 🤝
+####  Contribuir 🤝
 
 Si deseas contribuir a este proyecto, sigue estos pasos:
 
@@ -72,7 +72,7 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 5. Crea un nuevo Pull Request.
 
 
-## Contacto 📧
+####  Contacto 📧
 
 Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con el equipo de desarrollo:
 
