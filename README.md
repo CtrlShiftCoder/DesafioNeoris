@@ -89,6 +89,47 @@ Ejemplo de respuesta en formato JSON:
     "active": false
 }
 ```
+####  Diagrama de Componente 🤝
++-------------------------------------------------------------+
+|                    Backend de la Aplicación                 |
+|  +-------------------------------------------------------+  |
+|  |                    Configuraciones	                   |  |
+|  |                                                       |  |
+|  |   - SwaggerConfig					                           |  |
+|  +-------------------------------------------------------+  |
+|  |                    Controladores                      |  |
+|  |                                                       |  |
+|  |   - UserController                                    |  |
+|  +-------------------------------------------------------+  |
+|  |                    Servicios                          |  |
+|  |                                                       |  |
+|  |   - UserServiceImpl                                   |  |
+|  |   - PhoneServiceImpl                                  |  |
+|  +-------------------------------------------------------+  |
+|  |                    Repositorios                       |  |
+|  |                                                       |  |
+|  |   - UserRepository                                    |  |
+|  |   - PhoneRepository                                   |  |
+|  +-------------------------------------------------------+  |
+|  |                    Modelos                            |  |
+|  |                                                       |  |
+|  |   - UserModel                                         |  |
+|  |   - PhoneModel	                                       |  |
+|  +-------------------------------------------------------+  |
+|  |                    Utilidades                         |  |
+|  |                                                       |  |
+|  |   - JwtTokenUtil                                      |  |
+|  |   - PasswordUtil                                      |  |
+|  |   - Validators                                        |  |
+|  |   - ErrorResponse					                           |  |
+|  |   - ValidatorsException                               |  |
+|  +-------------------------------------------------------+  |
+|  |                    Base de Datos                      |  |
+|  |                                                       |  |
+|  |   - H2						                                     |  |
+|  +-------------------------------------------------------+  |
+|                                                             |
++-------------------------------------------------------------+
 
 
 ####  Contribuir 🤝
@@ -100,37 +141,6 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 3. Realiza tus cambios y haz commits (`git commit -am 'Agrega nueva característica'`).
 4. Haz push a la rama (`git push origin feature/nueva-caracteristica`).
 5. Crea un nuevo Pull Request.
-
-#### Diagrama de Proyecto:
-
-+---------------------------------------------+
-|                 Controladores               |
-| (Manejan las solicitudes HTTP entrantes)    |
-+---------------------------------------------+
-             |
-             | Enrutamiento de solicitudes
-             | y procesamiento básico
-             v
-+---------------------------------------------+
-|              Servicios                      |
-| (Lógica de negocio y funcionalidad)         |
-+---------------------------------------------+
-             |
-             | Implementación de la lógica
-             | de autenticación, registro, etc.
-             v
-+---------------------------------------------+
-|            Repositorios                     |
-| (Acceso a la base de datos)                 |
-+---------------------------------------------+
-             |
-             | Almacenamiento y recuperación
-             | de datos desde la base de datos
-             v
-+---------------------------------------------+
-|             Base de Datos                   |
-|    (H2 Base de datos en memoria)            |
-+---------------------------------------------+
 
 
 ####  Contacto 📧
