@@ -37,14 +37,14 @@ Este endpoint permite registrar un nuevo usuario en el sistema.
 
 #### Ejemplo de Objeto de Usuario
 
-```json
+```
 {
   "id": 1,
   "username": "usuarioejemplo",
   "email": "usuario@example.com",
   "password": "contrasena123"
 }
-```json
+```
 
 ####  Respuestas 📋
 - **201 Created:** Se devuelve cuando el usuario se registra correctamente.
@@ -54,13 +54,13 @@ Este endpoint permite registrar un nuevo usuario en el sistema.
 
 Ejemplo de respuesta en formato JSON:
 
-```json
+```
 {
   "id": 1,
   "username": "usuarioejemplo",
   "email": "usuario@example.com"
 }
-```json
+```
 
 
 ####  Contribuir 🤝
