@@ -1,6 +1,13 @@
 # Desafío Técnico - Proyecto Desafío
 
-Este es un proyecto desarrollado como parte de un desafío técnico. Proporciona una aplicación de backend construida con Spring Boot que ofrece una API REST para gestionar usuarios.
+Este proyecto es la implementación del backend para una aplicación web de gestión de usuarios. Utiliza tecnologías modernas como Spring Boot y Hibernate para proporcionar una API RESTful segura y eficiente.
+
+## Características Principales
+
+- **Autenticación Segura**: Utiliza JSON Web Tokens (JWT) para la autenticación de usuarios, asegurando que las solicitudes a la API estén protegidas y solo sean accesibles para usuarios autorizados.
+- **Validación de Datos**: Implementa validaciones exhaustivas para garantizar la integridad y seguridad de los datos ingresados por los usuarios, evitando errores y posibles vulnerabilidades.
+- **Persistencia Eficiente**: Utiliza Hibernate como ORM (Mapeo Objeto-Relacional) para interactuar con la base de datos de manera eficiente y mantener la consistencia de los datos.
+- **Arquitectura MVC**: Sigue el patrón de diseño Modelo-Vista-Controlador para separar la lógica de negocio de la lógica de presentación, facilitando la escalabilidad y el mantenimiento del código.
 
 ## Requisitos 🛠️
 
@@ -23,7 +30,7 @@ Una vez que la aplicación esté en funcionamiento, puedes acceder a la document
 
 ### Endpoint
 
-`POST /register`
+`POST /users/register`
 
 ### Descripción
 
@@ -39,11 +46,18 @@ Este endpoint permite registrar un nuevo usuario en el sistema.
 
 ```
 {
-  "id": 1,
-  "username": "usuarioejemplo",
-  "email": "usuario@example.com",
-  "password": "contrasena123"
+  "name": "Miguel Camiletti",
+  "email": "miguelandrecamilettim@gmail.com",
+  "password": "StrongPassword123!",
+  "phones": [
+    {
+      "number": "984459250",
+      "citycode": "1",
+      "countrycode": "12"
+    }
+  ]
 }
+
 ```
 
 ####  Respuestas 📋
@@ -56,9 +70,23 @@ Ejemplo de respuesta en formato JSON:
 
 ```
 {
-  "id": 1,
-  "username": "usuarioejemplo",
-  "email": "usuario@example.com"
+    "id": "aab447f5-bec4-42bc-8bee-f9bb919372b0",
+    "name": "Miguel Camiletti",
+    "email": "miguelcamilettim@gmail.com",
+    "password": "d9d8e7ee4e92681edbb144557bbf512c15e51582ed8f4a03dac98e88d1065674",
+    "phones": [
+        {
+            "id": 1,
+            "number": "984459250",
+            "cityCode": "1",
+            "countryCode": "12"
+        }
+    ],
+    "created": "2024-02-18T19:51:39.1254605",
+    "modified": "2024-02-18T19:51:39.1254605",
+    "lastLogin": "2024-02-18T19:51:39.1254605",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaWd1ZWxjYW1pbGV0dGltQGdtYWlsLmNvbSIsImNyZWF0ZWQiOjE3MDgyOTY2OTksImxhc3RfbG9naW4iOjE3MDgyOTY2OTksImlzYWN0aXZlIjp0cnVlLCJtb2RpZmllZCI6MTcwODI5NjY5OSwiaWQiOltudWxsXSwiZXhwIjoxNzA4Mjk2OTk5LCJpYXQiOjE3MDgyOTY2OTl9.fvUL5CwK67ohhzleegILXS2WDsYCokkgNptGfSMcjWE",
+    "active": false
 }
 ```
 
@@ -72,6 +100,37 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 3. Realiza tus cambios y haz commits (`git commit -am 'Agrega nueva característica'`).
 4. Haz push a la rama (`git push origin feature/nueva-caracteristica`).
 5. Crea un nuevo Pull Request.
+
+#### Diagrama de Proyecto:
+
++---------------------------------------------+
+|                 Controladores               |
+| (Manejan las solicitudes HTTP entrantes)    |
++---------------------------------------------+
+             |
+             | Enrutamiento de solicitudes
+             | y procesamiento básico
+             v
++---------------------------------------------+
+|              Servicios                      |
+| (Lógica de negocio y funcionalidad)         |
++---------------------------------------------+
+             |
+             | Implementación de la lógica
+             | de autenticación, registro, etc.
+             v
++---------------------------------------------+
+|            Repositorios                     |
+| (Acceso a la base de datos)                 |
++---------------------------------------------+
+             |
+             | Almacenamiento y recuperación
+             | de datos desde la base de datos
+             v
++---------------------------------------------+
+|             Base de Datos                   |
+|    (H2 Base de datos en memoria)            |
++---------------------------------------------+
 
 
 ####  Contacto 📧
