@@ -19,11 +19,11 @@ Este es un proyecto desarrollado como parte de un desafío técnico. Proporciona
 
 Una vez que la aplicación esté en funcionamiento, puedes acceder a la documentación de la API a través de Swagger UI. La URL predeterminada es `http://localhost:8080/swagger-ui/index.html`.
 
-### Registro de Usuario
+## Registro de Usuario
 
-#### Endpoint
+##  Endpoint
 
-#### Descripción
+##  Descripción
 
 Este endpoint permite registrar un nuevo usuario en el sistema.
 
@@ -33,7 +33,7 @@ Este endpoint permite registrar un nuevo usuario en el sistema.
 |-----------|--------|-------------------|
 | user      | Object | Objeto del usuario a registrar |
 
-#### Ejemplo de Objeto de Usuario
+## Ejemplo de Objeto de Usuario
 
 ```json
 {
