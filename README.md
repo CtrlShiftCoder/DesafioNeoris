@@ -19,21 +19,56 @@ Este es un proyecto desarrollado como parte de un desafío técnico. Proporciona
 
 Una vez que la aplicación esté en funcionamiento, puedes acceder a la documentación de la API a través de Swagger UI. La URL predeterminada es `http://localhost:8080/swagger-ui/index.html`.
 
-## Contribuir
+### Registro de Usuario
 
+#### Endpoint
+
+#### Descripción
+
+Este endpoint permite registrar un nuevo usuario en el sistema.
+
+#### Parámetros de Entrada
+
+| Parámetro | Tipo   | Descripción       |
+|-----------|--------|-------------------|
+| user      | Object | Objeto del usuario a registrar |
+
+#### Ejemplo de Objeto de Usuario
+
+```json
+{
+  "id": 1,
+  "username": "usuarioejemplo",
+  "email": "usuario@example.com",
+  "password": "contrasena123"
+}
+
+
+Respuestas
+201 Created: Se devuelve cuando el usuario se registra correctamente.
+400 Bad Request: Se devuelve cuando hay un error de validación en los datos del usuario.
+500 Internal Server Error: Se devuelve cuando ocurre un error interno en el servidor.
+
+{
+  "id": 1,
+  "username": "usuarioejemplo",
+  "email": "usuario@example.com"
+}
+
+
+Contribuir
 Si deseas contribuir a este proyecto, sigue estos pasos:
 
-1. Haz un fork del repositorio.
-2. Crea una nueva rama (`git checkout -b feature/nueva-caracteristica`).
-3. Realiza tus cambios y haz commits (`git commit -am 'Agrega nueva característica'`).
-4. Haz push a la rama (`git push origin feature/nueva-caracteristica`).
-5. Crea un nuevo Pull Request.
-
-## Contacto
-
+Haz un fork del repositorio.
+Crea una nueva rama (git checkout -b feature/nueva-caracteristica).
+Realiza tus cambios y haz commits (git commit -am 'Agrega nueva característica').
+Haz push a la rama (git push origin feature/nueva-caracteristica).
+Crea un nuevo Pull Request.
+Contacto
 Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con el equipo de desarrollo:
 
-- Nombre: [Tu Nombre]
-- Correo electrónico: [tu@email.com]
+Nombre: CtrlShiftCoder
+Correo electrónico: ignacioandrecamilettim@gmail.com
 
 ¡Gracias por tu interés en este proyecto!
+
