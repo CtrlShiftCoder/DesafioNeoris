@@ -4,7 +4,7 @@ import cl.camiletti.desafio.model.UserModel;
 import cl.camiletti.desafio.service.UserService;
 import cl.camiletti.desafio.util.ErrorResponse;
 import cl.camiletti.desafio.util.ValidationException;
-import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor
-@Api(tags = "users")
+@Tag(name = "Users")
 public class UserController {
     private final UserService userService;
 
