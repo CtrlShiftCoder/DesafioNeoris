@@ -90,6 +90,9 @@ Ejemplo de respuesta en formato JSON:
 }
 ```
 
+#### Documentación
+Para ver la documentación de la Api  una vez levantado en local: http://localhost:8080/swagger-ui/index.html#/Users/registerUser , podrá ver y probar el endpoint.
+
 ####  Contribuir 🤝
 
 Si deseas contribuir a este proyecto, sigue estos pasos:

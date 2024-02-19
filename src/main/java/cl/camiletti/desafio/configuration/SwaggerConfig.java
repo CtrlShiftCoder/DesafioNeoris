@@ -10,8 +10,8 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI usersMicroserviceOpenAPI() {
         return new OpenAPI()
-                .info(new Info().title("Your API Title")
-                        .description("Your API Description")
+                .info(new Info().title("UserApiRestfull")
+                        .description("Api Users For Neoris")
                         .version("1.0"));
     }
 }
