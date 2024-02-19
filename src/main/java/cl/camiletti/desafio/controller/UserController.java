@@ -5,7 +5,6 @@ import cl.camiletti.desafio.service.UserService;
 import cl.camiletti.desafio.util.ErrorResponse;
 import cl.camiletti.desafio.util.ValidationException;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
